@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "juggex-promptver"
+version = "0.1.0"
+description = "从调用记录反查提示词版本链，标出版本漂移与缺失"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "juggex" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://juggex.github.io"
+Repository = "https://github.com/juggex/promptver"
+Issues = "https://github.com/juggex/promptver/issues"
+
+[project.scripts]
+promptver = "promptver:main"
+
+[tool.setuptools]
+py-modules = ["promptver"]
